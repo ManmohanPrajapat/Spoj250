@@ -1,0 +1,19 @@
+#include <iostream>
+#include<cmath>
+using namespace std;
+
+int main() {
+	
+	// your code here
+	int t;
+	cin>>t;
+    for(int i=1;i<=t;i++)
+	{
+		long long n;
+		cin>>n;
+		n=sqrt(n+1)-1;
+		cout<<"Case "<<i<<": "<<n<<endl;
+	}
+
+	return 0;
+}
