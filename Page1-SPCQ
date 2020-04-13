@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+ 
+int main() {
+ 
+	// your code here
+	ios_base::sync_with_stdio(false);
+ cin.tie(NULL);
+ int t;
+ cin>>t;
+ while(t--)
+ {
+ 	long long n,temp,temp2;
+ 	cin>>n;
+ 	temp2=n;
+ 	while(1)
+ 	{
+ 		temp=temp2;
+ 		int sum=0;
+ 		while(temp>0)
+ 		{
+ 			sum+=temp%10;
+ 			temp/=10;
+ 		}
+ 		if(temp2%sum==0)
+ 		{
+ 		cout<<temp2<<'\n';
+ 		break;
+ 		}
+ 		else
+ 		temp2++;
+ 	}
+ }
+ 
+	return 0;
+}
