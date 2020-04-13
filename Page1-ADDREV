@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+int rev(int x)
+{
+	int sum=0;
+	while(x>0)
+	{
+	sum=sum*10+x%10;
+	x=x/10;
+	}
+	return sum;
+}
+int main()
+{
+	int t;
+	cin>>t;
+	while(t--)
+	{
+		int a;
+		int b;
+		cin>>a>>b;
+		int sum=rev(a)+rev(b);
+		cout<<rev(sum)<<endl;
+		
+	}
+	return 0;
+}
