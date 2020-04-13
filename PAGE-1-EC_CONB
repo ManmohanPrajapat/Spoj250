@@ -1,0 +1,34 @@
+//using stack
+#include <iostream>
+#include<stack>
+using namespace std;
+int main() {
+	int t;
+	cin>>t;
+	while(t--)
+	{
+		int n;
+		cin>>n;
+		if(n&1)
+		cout<<n<<endl;
+		else
+		{
+			int sum=0;
+			stack<int>stk;
+			while(n>0)
+			{
+				stk.push(n%2);
+				n/=2;
+			}
+			int i=1;
+			while(!stk.empty())
+			{
+				sum+=stk.top()*i;
+				i*=2;
+				stk.pop();
+			}
+			cout<<sum<<endl;
+		}
+	}
+	return 0;
+}
